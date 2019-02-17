@@ -1,0 +1,18 @@
+listeners:
+    default:
+        max-connections: 500
+        type: tcp
+    my-tcp-ssl-1:
+        bind: 0.0.0.0:8883
+        ssl: on
+        cafile: ./client.crt
+        certfile: ./server.crt
+        keyfile: ./server.key
+sys_interval: 20
+auth: 
+    allow-anonymous: false
+    password-file: ./password
+plugins:
+    - auth_anonymous
+topic-check:
+  enabled: False
