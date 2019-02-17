@@ -97,4 +97,9 @@ script.
 $ poetry run rshell -p com10 cp esp8266/*.py /pyboard
 ```
 
-Finally execute the 
+Finally execute the mqttclient.py script on the esp8266.  Below is how to do it
+with pyboard.
+
+```bash
+$ poetry run pyboard --device COM10 mqttclient.py
+``` 
